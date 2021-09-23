@@ -5,7 +5,7 @@ const logger = require("morgan");
 const path = require('path');
 require('dotenv').config();
 //Port
-const PORT= process.env.PORT || 3001;
+const PORT= process.env.PORT || 3008;
 
 //Mongoose connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
