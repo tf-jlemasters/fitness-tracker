@@ -1,7 +1,7 @@
 # **Fitness Tracking App**
 
 ## Description 
-A fitness tracker application built using NoSQL, Mongoose, and MongoDB. Use this application to keep track of your exercises and workouts.
+A fitness tracker application built using NoSQL, Mongoose, and MongoDB. Use this application to keep track of your exercises and workouts. This application is deployed on Heroku.
 ## Table of contents
 - [Description](#Description)
 - [Installation](#Installation)
