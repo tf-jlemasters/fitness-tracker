@@ -9,11 +9,6 @@ router.get('/api/workouts', async (req, res) => {
                     totalDuration: {$sum: "$exercises.duration"}
                 }
             },
-            /*{
-                $addFields:{
-                    name: ["$exercises.name"]
-                }
-            }*/
         ]).sort({ date: -1 });
         console.log(lastWorkout);
         res.status(200).json(lastWorkout);
@@ -38,7 +33,6 @@ router.get('/api/workouts/range', async (req, res) => {
         res.status(500).json(e);
     }
 })
-
 //Post request for new workout
 router.post('/api/workouts', async (req, res) => {
     try {
@@ -61,7 +55,6 @@ router.put('/api/workouts/:id', async (req, res) => {
             new: true,
         },
         );
-
         res.status(200).json(addExercise);
     } catch (e) {
         res.status(500).json(e);
