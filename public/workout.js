@@ -18,7 +18,6 @@ async function initWorkout() {
     renderNoWorkoutText()
   }
 }
-
 function tallyExercises(exercises) {
   const tallied = exercises.reduce((acc, curr) => {
     if (curr.type === "resistance") {
@@ -32,7 +31,6 @@ function tallyExercises(exercises) {
   }, {});
   return tallied;
 }
-
 function formatDate(date) {
   const options = {
     weekday: "long",
@@ -43,10 +41,8 @@ function formatDate(date) {
 
   return new Date(date).toLocaleDateString(options);
 }
-
 function renderWorkoutSummary(summary) {
   const container = document.querySelector(".workout-stats");
-
   const workoutKeyMap = {
     date: "Date",
     totalDuration: "Total Workout Duration",
@@ -70,7 +66,6 @@ function renderWorkoutSummary(summary) {
     container.appendChild(p);
   });
 }
-
 function renderNoWorkoutText() {
   const container = document.querySelector(".workout-stats");
   const p = document.createElement("p");
@@ -80,5 +75,4 @@ function renderNoWorkoutText() {
   p.appendChild(strong);
   container.appendChild(p);
 }
-
 initWorkout();
